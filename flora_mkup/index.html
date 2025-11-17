@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GlowUP - Loja de Maquiagem (Demo)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- SIDEBAR HAMBURGER (mobile) -->
+  <aside id="sidebar" class="sidebar hidden">
+    <button id="close-sidebar" class="close-btn">&times;</button>
+    <nav class="sidebar-nav">
+      <a href="index.html">Home</a>
+      <a href="#products">Produtos</a>
+      <a href="#/profile">Perfil</a>
+      <a href="https://www.instagram.com/ffloramakeupp/" target="_blank">Contato</a>
+    </nav>
+  </aside>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="nav">
+    <div class="nav-left">
+      <button id="burger" class="burger" aria-label="Abrir menu">☰</button>
+      <div class="brand"> 
+        <a href="index.html"><img class="logo" src="/assets/flora_makeup_1.png"alt=""></a>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <div class="search-wrapper">
+        <input id="search" type="search" placeholder="Buscar produtos..." autocomplete="off" />
+        <div id="search-preview" class="search-preview hidden" role="listbox"></div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <button id="btn-cart" class="icon" title="Carrinho">🛒 <span id="cart-count" class="badge">0</span></button>
+      <a href="#/profile" class="icon" title="Perfil">👤</a>
+    </div>
+  </header>
+
+  <!-- MAIN APP ROOT -->
+  <main id="app" class="app-root">
+    <!-- the router will inject pages here -->
+  </main>
+
+  <!-- CART MODAL -->
+  <div id="cart-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h3>Carrinho</h3>
+        <button id="close-cart" class="close-btn">✕</button>
+      </header>
+      <div id="cart-list" class="cart-list"></div>
+      <div class="modal-footer">
+        <div class="total">Total: <strong id="cart-total">R$ 0,00</strong></div>
+        <div class="actions">
+          <button id="clear-cart" class="btn ghost">Limpar</button>
+          <button id="checkout" class="btn primary">Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST (messages) -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
